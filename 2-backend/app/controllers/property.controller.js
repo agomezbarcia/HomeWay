@@ -245,6 +245,9 @@ exports.getProperties = async (req, res) => {
         // Buscar propiedades y poblar referencias
         let result = [];
         result = await Property.find(query).populate("host").populate("amenities");
+        
+        // Filtrar propiedades cuyo host esté vacío (null o undefined)
+        result = result.filter(property => property.host);
 
         // Enviar la respuesta con los resultados encontrados
         return res.status(200).send({ data: result, code: 2001 });

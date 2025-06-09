@@ -518,7 +518,7 @@
         </div>
 
         <div class="mt-4 d-flex justify-content-end gap-2">
-          <button v-if="isHostAdmin" type="button" class="btn btn-danger" data-bs-toggle="modal"
+          <button v-if="isHostAdmin && isHostOfSelectedProperty" type="button" class="btn btn-danger" data-bs-toggle="modal"
             data-bs-target="#deletePropertyModal">
             <i class="fas fa-trash me-2"></i>Eliminar
           </button>
@@ -712,7 +712,7 @@
       message="La propiedad seleccionada será borrada de la base de datos. Esta acción es irreversible"
       reject="No borrar"
       confirm="Borrar propiedad"
-      @click="deleteProperty(selectedProperty._id)"
+      @performAction="deleteProperty(selectedProperty._id)"
       @cancel="selectedProperty = null"
       ref="deletePropertyModal"
     ></ModalConfirm>
@@ -922,6 +922,10 @@ export default {
       return useUsersStore().v_userdata?.role.actions.includes('PROPERTY_ADMIN') ||
         useUsersStore().v_userdata?.role.actions.includes('ADMIN');
     },
+    // ¿El usuario es el anfitrión de la propiedad seleccionada?
+    isHostOfSelectedProperty() {
+      return this.selectedProperty && this.activeUser === this.selectedProperty.host.info._id;
+    },
     // Texto para mostrar el host
     hostDisplay() {
       return this.selectedProperty?.host
@@ -1006,6 +1010,7 @@ export default {
               }
             }
           });
+
           property.reviews = this.reviews.filter(review => review.booking.property === property._id);
         });
       } catch (error) {

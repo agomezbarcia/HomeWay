@@ -193,9 +193,9 @@ exports.getBookingsByHost = async (req, res) => {
       limit
     );
 
-    // Filtrar las reservas por el ID del anfitrión
+    // Filtrar las reservas por el ID del anfitrión, asegurando que property y host existan
     bookings.data = bookings.data.filter(booking => {
-      return booking.property.host.toString() === hostId;
+      return booking.property && booking.property.host && booking.property.host.toString() === hostId;
     });
 
     // Contar el total de registros filtrados
