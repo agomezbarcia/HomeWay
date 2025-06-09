@@ -1,0 +1,304 @@
+.btnSubmit {
+  font-size: 0.98rem !important;
+  padding: 3px !important;
+  margin-top: 1vh;
+}
+
+.backButton {
+  margin-top: 4vh;
+}
+
+.backButton p {
+  font-size: 0.8rem;
+  color: #333333;
+  margin: 0px auto 0px auto;
+  text-align: center;
+  cursor: pointer;
+  font-weight:400
+}
+
+.backButton i {
+  margin-right:0.2vw
+}
+
+
+.tituloForm {
+  font-size: 1.2rem;
+  color: #000;
+  margin: 0px auto 0px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.titleNavBar {
+  min-height: 65px;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  background-color: #005372;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.backImage {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(0, 0, 0, 0.3)
+    );
+    
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.card {
+  /*max-width: 550px;*/
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 25px;
+}
+
+.titleNavBarFont {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+  min-height: 5.5vh;
+  background-color: #005372;
+  padding: 10px;
+  box-shadow: 0px 0 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.logoCHG {
+  padding-right: 20px;
+}
+
+.textFooter {
+  font-weight: 350;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+
+/*.container-fluid {
+  padding-right: var(--bs-gutter-x,.0rem) !important;
+}*/
+
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.component-fade-enter-from,
+.component-fade-leave-to {
+  opacity: 0;
+}
+
+
+.lastUpdate {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  text-align: right;
+}
+
+.optionButtons {
+  text-align: right;
+}
+
+
+/* UTILIDADES CSS DE USO GENERAL*/
+.cursor-pointer{
+cursor: pointer;
+}
+
+button {
+/*Override default font-size*/
+font-size: 0.87rem !important;
+}
+
+/*REVISAR:: SOBRECARAGA DE OTROS CSS*/
+:root {
+--margin-top-with-banner: 62px;
+}
+
+main {
+padding: 3vh 0vw 0vh 0vw;
+}
+
+body {
+font-size: 0.875rem;
+background-color: #f5f7fb;
+}
+
+.card {
+padding: 0px;
+}
+
+.form-control-dark {
+color: #fff;
+background-color: rgba(255, 255, 255, 0.1);
+border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-control-dark:focus {
+border-color: transparent;
+box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+}
+
+@media (min-width: 768px) {
+.bd-placeholder-img-lg {
+font-size: 3.5rem;
+}
+}
+
+
+.routerLink {
+text-decoration: none;
+}
+
+.custPadding {
+padding: 1.5rem !important;
+}
+
+@media (max-width: 576px) {
+.custPadding {
+  padding:0rem !important;
+}  
+}
+
+
+.cmmWrapper{
+  max-width: 100vw;
+  width:  calc(100% - var(--bs-gutter-x) * 0) !important;
+}
+
+  @media (max-width: 768px) {
+    .cmmWrapper {
+      max-width: 100vw;
+      width:  calc(100% - var(--bs-gutter-x) * 2.5) !important;
+    }
+
+  }
+
+  /* COPIADO DE LA PAGINA DE BOOTSTRAP*/
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #e9ecef;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.bd-callout-info {
+  border-left-color: #5bc0de;
+}
+
+.bd-callout-warning {
+border-left-color: #f0ad4e;
+}
+
+.bd-callout-danger {
+border-left-color: #d9534f;
+}
+
+.bd-shadow {
+box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+transition: 0.3s;
+}
+
+.span-advanced-settings {
+font-size: 12px;
+font-weight: bold;
+margin-left: 5px;
+}
+
+/* GENERAL CSS DEVICES SECTION*/
+.deviceItemTitle{
+font-size: 0.9rem;
+font-weight: 700;
+white-space: nowrap;
+transition: color 0.2s ease-out;
+}
+
+.deviceItemText{
+font-size: 0.9rem;
+font-weight: 300;
+white-space: nowrap;
+}
+
+/* GENERAL CSS LOCATIONS */
+.locationItemTitle {
+font-weight: 500;
+}
+
+.avoidFocus {
+outline:0px !important;
+-webkit-appearance:none;
+box-shadow: none !important;
+}
+
+/* MAX WIDTH */
+.maxWrapperWidth{
+max-width: 1360px !important;
+padding-right: var(--bs-gutter-x,.75rem);
+padding-left: var(--bs-gutter-x,.75rem);  
+}
+
+.centeredContent {
+margin: auto;
+align-content: center;
+width: 100vw;
+}
+
+.contentWrapper {
+min-height: calc(100vh - 310px)
+}
+.contentWrapperDetails{
+min-height: calc(100vh - 610px)
+}
+
+.subMenuCss{
+padding-top:10px;
+padding-bottom: 8px;
+border-bottom: 1px solid #e2e0e0;
+}
+
+.unbreakable{
+white-space: nowrap;
+}
+
+/* VUJS3 Transitions*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

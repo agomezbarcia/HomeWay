@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "version": "2.0.0",
+  "description": "Server with Node.js, Express and MongoDB",
+  "scripts": {
+    "start": "node ./server.js",
+    "dev": "nodemon -L --inspect=0.0.0.0 --max-old-space-size=2048 server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "api",
+    "mongodb"
+  ],
+  "author": "GIE",
+  "license": "ISC",
+  "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "@paypal/payouts-sdk": "^1.1.1",
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "date-fns": "^4.1.0",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "mssql": "^10.0.2",
+    "mysql2": "^3.11.4",
+    "node-cron": "^3.0.2",
+    "node-powershell": "^5.0.1",
+    "nodemailer": "^7.0.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.0.1"
+  }
+}
