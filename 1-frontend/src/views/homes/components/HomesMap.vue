@@ -40,7 +40,7 @@
               </button>
               <!-- Botón mover punto -->
               <button
-                v-if="isHostAdmin && editingMarkerId !== property._id"
+                v-if="isHostAdmin && editingMarkerId !== property._id && property.host.info._id === activeUser"
                 class="btn btn-warning mb-2 w-100"
                 @click="startEditing(property)"
               >
@@ -48,7 +48,7 @@
               </button>
               <!-- Botón editar propiedad -->
               <button
-                v-if="isHostAdmin && editingMarkerId !== property._id"
+                v-if="isHostAdmin && editingMarkerId !== property._id && property.host.info._id === activeUser"
                 class="btn btn-secondary mb-2 w-100"
                 data-bs-toggle="modal"
                 data-bs-target="#editProperty"
@@ -829,6 +829,7 @@ export default {
       properties: [],
       reviews: [],
       users: [],
+      activeUser: useUsersStore().v_userdata._id,
       // Capas base del mapa
       baseLayers: {
         default: {
